@@ -1,0 +1,218 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Dancing Script', cursive;
+}
+#head{
+    width: 100%;
+    height: 100px;
+}
+#menu{
+    height: 100%;
+    background-color: #1c1d22;
+    position: fixed;
+    transition: 0.7s;
+    width: 0px;
+    }
+#container{
+    height: 596px;
+    background-color:#30336b;
+    transition: margin-left 0.7s;
+    transition: padding-left 0.7s;
+    overflow-y: auto;
+}
+
+h1{
+   font-family: 'Dancing Script', cursive;
+   padding-top: 0px; 
+   letter-spacing: 4px;
+   color:black;
+   font-size: 50px;
+   position: absolute;
+   right: 630px;
+   top:20px;
+}
+li{
+    height: 53px;
+    font-size: 20px;
+    color: #cecece;
+    cursor: pointer;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+li a{
+    text-decoration: none;
+    color: #cecece;
+}
+li a:hover{
+    text-decoration: none;
+    color: black;
+}
+#list{
+    margin-top: 150px;
+}
+.SubCategory{
+    display: none;
+}
+.BookCategory{
+    display: none;
+}
+#close{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    top:20px;
+    left: 20px;
+}
+#open{
+    font-size:60px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+li:hover {
+    background-color:white;
+    color: black;
+}
+#form{
+    background-color: #ecf0f1;
+    width: 800px;
+    border-radius: 5px 5px 5px 5px;
+    overflow-y: auto;
+    height: 540px;
+    margin-left: 240px;
+    margin-top: 30px;
+}
+h2{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.inputtextfield{
+    border-radius: 5px 5px 5px 5px;
+    width: 400px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    border-color: lightgray;
+    border-width: 1px;
+}
+#switch{
+    background-color: violet;
+}
+.date{
+    font-size: 20px;
+    margin-left: 30px;
+}
+#input1{
+    width: 450px;
+    margin-left: 30px;
+}
+#dateP{
+    margin-top: -60px;
+    margin-left: 30px;
+}
+#BillLabel{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 5px;
+
+}
+#file{
+    margin-left: 30px;
+    width: 400px;
+    margin-top: 20px;
+}
+#sellbutton{
+    width: 400px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.option{
+    margin-left: 10px;
+}
+.custom-select{
+     margin-top: 10px;
+    
+}
+#category{
+    width: 400px;
+    margin-left: 30px;
+}
+#subcategory{
+    width: 400px;
+    margin-left: 30px;
+    display: none;
+}
+.card{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+}
+.card-body{
+    overflow-y: auto;
+}
+img{
+    margin:5p 5px 5px 5px;
+}
+    
+.Products{
+    display: inline-block;
+    width: 200px;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    height: 484px;
+   
+}
+.card-img-top{
+    width: 50px;
+    height: 180px;
+}
+.btn{
+    margin-top: 3px;
+}
+#BuyButton{
+    margin-left: 22px;
+}
+#Products{
+    width: 50%;
+    margin-left: 180px;
+}
+p{
+    margin-top: 0px;
+}
+Button a{
+    text-decoration: none;
+    color: white;
+}
+#address{
+    resize: none;
+}
+#button{
+    margin-left: 60px;
+    margin-top: 30px;
+}
+#Cancel{
+    margin-left: 150px;
+    margin-top: -65px;
+}
+#buyersfield{
+    height: 30px;
+    width: 140px;
+    margin-top: 0px;
+    
+}
+#AddSoldbutton{
+    margin-top: 10px;
+    margin-left: 7px;
+}
+.card-body{
+    margin-top: -15px;
+}
