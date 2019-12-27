@@ -1,0 +1,69 @@
+extend layout
+block content
+  
+  div#form
+    h2.sellh2 Sell Your Product For Reasonable Prices
+    form(enctype='multipart/form-data',action='/Sell',method='post')
+      div#input1
+        input.form-control.form-control(type='text',name='brand',placeholder='Brand')
+        br
+        input.form-control.form-control(type='text',name='Model',placeholder='ModelName')
+        br
+      label.date(for='DateofPurchase') Date Of Purchase: &nbsp
+      br
+      input#dateP(type='date',name='DateofPurchase')
+      br
+      div.custom-control.custom-radio
+        label.custom-control-label(for='Bill')#BillLabel Do You Have Purchased Bill?
+        br
+        input.option(type='radio',name='Bill',value='Yes')
+        |  Yes
+        input.option(type='radio',name='Bill',value='No')
+        | No
+      br
+      select#category(name='category',onfocusout='subcategory()').custom-select
+        option(selected) Select Category
+        option(value='Computer Appliances') Computer Appliances
+        option(value='Cycles&Spare Parts') Cycle&Spare Parts
+        option(value='Cooking Appliances') Cooking Aplliances
+        option(value='Furniture') Furniture
+        option(value='Mobile&Related Appliances') Mobile&Related Appliances
+        option(value='Books') Books
+        option(value='Sports& Fitness Equipments') Sports& Fitness Equipments
+        option(value='Musical Instruments') Musical Instruments
+        option(value='Others') Others
+      div#subcategory
+        select(name='Subcategory').custom-select
+          option(selected) Select Department
+          option(value='Mathematics') Mathematics
+          option(value='Physics') Physics
+          option(value='Chemistry') Chemistry
+          option(value='EntranceExam Materials') EntranceExam Materials
+          option(value='CSE') CSE
+          option(value='ECE') ECE
+          option(value='EEE') EEE
+          option(value='Mechanical') Mechanical
+          option(value='Production') Production
+          option(vvalue='Metallurgy') Metallurgy
+          option(value='ICE') ICE
+          option(value='Civil') Civil
+          option(value='Architecture') Architecture
+          option(value='Mangement Studies') Mangement Studies
+      script(type='text/javascript').
+        function subcategory(){
+        if(document.getElementById('category').value=='Books')
+          document.getElementById('subcategory').style.display='block';
+        else
+          document.getElementById('subcategory').style.display='none';}
+        $('.custom-file-input').on('change', function() {
+         var fileName = $(this).val().split('\\').pop();
+         $(this).siblings('.custom-file-label').addClass('selected').html(fileName);});
+
+
+      div.custom-file#file
+        label.custom-file-label(for='Productimage') Choose File
+        input.custom-file-input#customFile(type="file",name='Productimage')
+      br
+      input#sellbutton.btn.btn-primary(type="submit",value='Sell')
+
+   

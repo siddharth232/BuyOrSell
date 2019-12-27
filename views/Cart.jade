@@ -1,0 +1,19 @@
+extend layout
+block content
+  
+
+  script(type='text/javascript').
+   console.log('sad');
+  -var array=JSON.parse(content);
+   each val in array
+    div.Products
+       div.card
+         img.card-img-top(src='/images/Uploads/'+val.ImageUrl,alt='card image',style='width:100%')
+         div.card-body
+              h4.class-title=val.model+val.brand
+              p='DataofPurchase:'+ val.DateofPurchase
+              p= 'Bill'+val.Bill
+              p="category:"+val.category
+              form(method='post',action='/Cart/'+val._id)
+                input(type='submit' value='Remove From  Cart').btn.btn-primary
+  

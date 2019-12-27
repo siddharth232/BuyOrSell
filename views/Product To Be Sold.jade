@@ -1,0 +1,19 @@
+extend layout
+block content
+  -var array=JSON.parse(content);
+     each val in array
+      div.Products
+       div.card
+         img.card-img-top(src='/images/Uploads/'+val.ImageUrl,alt='card image',style='width:100%')
+         div.card-body
+              h4.class-title=val.model+val.brand
+              p='DataofPurchase:'
+              p= val.DateofPurchase.substring(0,val.DateofPurchase.indexOf('T'))
+              p= 'Bill:'+val.Bill
+              p="category:"+val.category
+              form(method='post',action='/Sold/'+val._id)
+                input#buyersfield(type='text' name='BuyersUsername' placeholder='Buyer`s Username..' required)
+                input#AddSoldbutton(type='submit' value='Add To sold List').btn.btn-primary
+              
+
+

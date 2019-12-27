@@ -1,0 +1,16 @@
+extend layout
+block content
+  
+  -var array=JSON.parse(content)
+   div#form
+    h2.sellh2 Update Your Profile
+    form(action='/UpdateProfile',method='post')
+      textarea.inputtextfield#address(type="text" name="address" placeholder=array.address cols='20' row='50' required)
+      br
+      input.inputtextfield#password(type="password" name="pass" placeholder=array.password required)
+      br
+      input.inputtextfield#cpassword(type="password" name="cpass" placeholder="Confirm Password..." required)
+      br
+      input#button(type="submit" name="signup" value="Update").btn.btn-primary
+    Button#Cancel.btn.btn-primary
+      a(href='/') Cancel

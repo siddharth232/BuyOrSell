@@ -1,0 +1,91 @@
+doctype html
+html
+  head
+    title= BuyOrSell
+    link(rel='stylesheet', href='/stylesheets/LayoutStyle.css')
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/toggle.js"></script>
+    
+  body
+    div#menu
+      i.fa.fa-times#close(onclick='closeslidemenu()')
+      ul#list
+          li.category
+            a(href='/Home') Home
+          li.category 
+            a(href='/Sell') Sell
+          li.category
+            a(href='/SoldList') SoldList
+          li.caregory
+            a(href='/ProductToBeSold') Product To Be Sold
+          li.category(onclick='toggle()') Category
+          li.SubCategory(onclick='toggle()') Back
+          li.SubCategory 
+            a(href='/category/Computer Appliances') Computer Appliances
+          li.SubCategory 
+            a(href='/category/Cycles&Spare Parts') Cycles&Spare Parts
+          li.SubCategory 
+            a(href='/category/Cooking Appliances') Cooking Appliances
+          li.SubCategory 
+            a(href='/category/Furniture') Furniture
+          li.SubCategory 
+            a(href='/category/Mobile&Related Appliances') Mobile&Related Appliances
+          li.SubCategory(onclick='toggle2()') Books
+          li.BookCategory(onclick='toggle2()') Back
+          li.BookCategory
+            a(href='/BookCategory/Mathematics') Mathematics
+          li.BookCategory
+            a(href='/BookCategory/Physics') Physics
+          li.BookCategory 
+            a(href='/BookCategory/Chemistry') Chemistry
+          li.BookCategory 
+            a(href='/BookCategory/EntranceExam Materials') EntranceExam Materials
+          li.BookCategory
+            a(href='/BookCategory/CSE') CSE
+          li.BookCategory
+            a(href='/BookCategory/ECE') ECE
+          li.BookCategory 
+            a(href='/BookCategory/EEE') EEE
+          li.BookCategory
+            a(href='/BookCategory/Mechanical') Mechanical
+          li.BookCategory
+            a(href='/BookCategory/Production') Production
+          li.BookCategory
+            a(href='/BookCategory/Metallurgy') Metallurgy
+          li.BookCategory
+            a(href='/BookCategory/ICE') ICE
+          li.BookCategory
+            a(href='/BookCategory/Civil') Civil
+          li.BookCategory
+            a(href='/BookCategory/Architecture') Architecture
+          li.BookCategory
+            a(href='/BookCategory/Mangement Studies') Mangement Studies
+          li.SubCategory
+            a(href='/category/Sports& Fitness Equipments') Sports& Fitness Equipments
+          li.SubCategory
+            a(href='/category/Musical Instruments') Musical Instruments
+          li.SubCategory
+            a(href='/category/Others') Others
+          li.category
+            a(href='/Cart') Your Cart
+          li.category
+            a(href='/Profile') Profile
+          li.category
+            a(href='/LogOut') Log Out
+      
+    
+    div#head
+      span
+        i.fa.fa-bars#open(onclick='openslidemenu()')
+      h1 BuyOrSell
+      script(type='text/javascript').
+        if('#{messages}')
+          alert('#{messages}');
+        
+    div#container
+      block content

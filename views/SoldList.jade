@@ -1,0 +1,11 @@
+extend layout
+block content
+  -var array=JSON.parse(content)
+   each val in array
+   div.Products
+     img.card-img-top(src='/images/Uploads/'+val.ImageUrl,alt='card image',style='width:100%')
+         div.card-body
+              h4.class-title=val.model+val.brand
+              p="category:"+val.category
+              p="BuyerUsername:"+val.Buyer
+              

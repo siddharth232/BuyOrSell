@@ -1,0 +1,16 @@
+extend layout
+block content
+  div#form
+    h2.sellh2 Product Details
+    -var array=JSON.parse(content)
+    div#Products
+      div.card
+        img.card-img-top(src='/images/Uploads/'+array[0].ImageUrl,alt='card image',style='width:100%')
+        div.card-body
+          h4.class-title=array[0].model+array[0].brand
+          p='DataofPurchase: '+ array[0].DateofPurchase.substring(0,array[0].DateofPurchase.indexOf('T'))
+          p= 'Bill: '+array[0].Bill
+          p="category: "+array[0].category
+          p='Owner: '+array[1].username
+          p='MobileNumber: '+array[1].mobile
+          p='Address: '+array[1].address
